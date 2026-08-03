@@ -3,6 +3,7 @@ import { Star } from "lucide-react";
 
 import { Reveal } from "@/components/Reveal";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { withBasePath } from "@/lib/base-path";
 
 const TESTIMONIALS: {
   quote: string;
@@ -40,7 +41,7 @@ export function Testimonials() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <Reveal className="relative min-h-64 overflow-hidden rounded-sm sm:col-span-2 sm:min-h-full lg:col-span-1 lg:row-span-2">
             <Image
-              src="/images/ringside-candid-smile.jpg"
+              src={withBasePath("/images/ringside-candid-smile.jpg")}
               alt="Camp participant smiling ringside after training"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"

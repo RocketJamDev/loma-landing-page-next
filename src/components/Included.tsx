@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { Reveal } from "@/components/Reveal";
+import { withBasePath } from "@/lib/base-path";
 
 const TILES = [
   {
@@ -69,7 +70,7 @@ export function Included() {
             >
               <div className="group relative size-full min-h-[220px] overflow-hidden rounded-sm md:min-h-0">
                 <Image
-                  src={tile.src}
+                  src={withBasePath(tile.src)}
                   alt={tile.alt}
                   fill
                   sizes="(min-width: 1024px) 40vw, (min-width: 768px) 50vw, 100vw"

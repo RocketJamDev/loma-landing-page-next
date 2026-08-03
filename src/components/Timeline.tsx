@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 
 import { Reveal } from "@/components/Reveal";
+import { withBasePath } from "@/lib/base-path";
 
 const DAYS = [
   {
@@ -122,7 +123,7 @@ export function Timeline() {
             className="relative aspect-3/4 w-56 shrink-0 overflow-hidden rounded-sm sm:w-64"
           >
             <Image
-              src={d.image}
+              src={withBasePath(d.image)}
               alt={d.alt}
               fill
               sizes="256px"

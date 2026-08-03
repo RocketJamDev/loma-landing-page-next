@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Big_Shoulders, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+import { withBasePath } from "@/lib/base-path";
 
 const bigShoulders = Big_Shoulders({
   variable: "--font-big-shoulders",
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
     images: ["/images/hero-fight-club-kick.jpg"],
   },
   icons: {
-    icon: "/images/logo.jpg",
+    icon: withBasePath("/images/logo.jpg"),
   },
 };
 

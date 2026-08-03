@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { Reveal } from "@/components/Reveal";
 import { RequestInfoForm } from "@/components/RequestInfoForm";
+import { withBasePath } from "@/lib/base-path";
 
 export function FinalCTA() {
   return (
@@ -10,7 +11,7 @@ export function FinalCTA() {
       className="relative overflow-hidden py-24 text-white sm:py-28"
     >
       <Image
-        src="/images/heavy-bag-power-shot.jpg"
+        src={withBasePath("/images/heavy-bag-power-shot.jpg")}
         alt="Fighter mid-punch on a heavy bag with motion and sweat"
         fill
         sizes="100vw"

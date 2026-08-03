@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Camera, Mail, MessageCircle } from "lucide-react";
 
+import { withBasePath } from "@/lib/base-path";
+
 const CAMP_LINKS = [
   { href: "#included", label: "What's Included" },
   { href: "#experience", label: "The Experience" },
@@ -20,7 +22,7 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <span className="flex items-center rounded-md bg-paper p-1.5">
                 <Image
-                  src="/images/logo.jpg"
+                  src={withBasePath("/images/logo.jpg")}
                   alt="Loma Muay Thai — โลมา มวยไทย"
                   width={444}
                   height={298}

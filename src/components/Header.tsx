@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import { withBasePath } from "@/lib/base-path";
 
 const NAV_LINKS = [
   { href: "#included", label: "What's Included" },
@@ -37,7 +38,7 @@ export function Header() {
         <a href="#top" className="flex items-center gap-3">
           <span className="flex items-center rounded-md bg-paper p-1 shadow-sm">
             <Image
-              src="/images/logo.jpg"
+              src={withBasePath("/images/logo.jpg")}
               alt="Loma Muay Thai — โลมา มวยไทย"
               width={444}
               height={298}

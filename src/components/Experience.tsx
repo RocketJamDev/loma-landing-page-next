@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { Reveal } from "@/components/Reveal";
 import { cn } from "@/lib/utils";
+import { withBasePath } from "@/lib/base-path";
 
 const COACH_STATS = [
   { num: "2×", label: "World Champion" },
@@ -144,7 +145,7 @@ function Block({
         )}
       >
         <Image
-          src={image}
+          src={withBasePath(image)}
           alt={alt}
           fill
           sizes="(min-width: 1024px) 50vw, 100vw"
@@ -153,7 +154,7 @@ function Block({
         {overlay && (
           <div className="absolute bottom-5 left-5 h-28 w-28 overflow-hidden rounded-sm shadow-[0_18px_40px_-12px_rgba(0,0,0,0.6)] ring-2 ring-paper sm:h-36 sm:w-36">
             <Image
-              src={overlay}
+              src={withBasePath(overlay)}
               alt="Paloma Arranz portrait"
               fill
               sizes="144px"

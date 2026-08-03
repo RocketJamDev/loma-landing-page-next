@@ -7,6 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { withBasePath } from "@/lib/base-path";
 
 const FAQS = [
   {
@@ -55,7 +56,7 @@ export function FAQ() {
         <div className="mt-10 grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <Reveal className="relative hidden aspect-4/5 overflow-hidden rounded-sm lg:block">
             <Image
-              src="/images/silhouette-high-kick.jpg"
+              src={withBasePath("/images/silhouette-high-kick.jpg")}
               alt="Silhouette of two fighters training a high kick"
               fill
               sizes="33vw"

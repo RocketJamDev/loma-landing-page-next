@@ -1,12 +1,13 @@
 import Image from "next/image";
 
 import { Reveal } from "@/components/Reveal";
+import { withBasePath } from "@/lib/base-path";
 
 export function Quote() {
   return (
     <section className="relative flex min-h-[52vh] items-center justify-center overflow-hidden py-24 text-center text-white sm:min-h-[60vh]">
       <Image
-        src="/images/cinematic-sparring-silhouette.jpg"
+        src={withBasePath("/images/cinematic-sparring-silhouette.jpg")}
         alt="Silhouettes of two fighters sparring a high kick at golden hour"
         fill
         sizes="100vw"

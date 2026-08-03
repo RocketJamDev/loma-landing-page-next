@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 import { RequestInfoForm } from "@/components/RequestInfoForm";
+import { withBasePath } from "@/lib/base-path";
 
 const STATS = [
   { num: "10", label: "Days & Nights" },
@@ -17,7 +18,7 @@ export function Hero() {
       className="relative isolate flex min-h-[100svh] items-end overflow-hidden text-white"
     >
       <Image
-        src="/images/hero-fight-club-kick.jpg"
+        src={withBasePath("/images/hero-fight-club-kick.jpg")}
         alt="Fighter throwing a high kick on a heavy bag inside a Phuket Muay Thai gym"
         fill
         priority
