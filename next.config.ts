@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 // Nombre del repositorio en GitHub (usado como subruta en usuario.github.io/<repo>)
-const repoName = "loma-landing-page";
+const repoName = "loma-landing-page-next";
 const isGithubActions = process.env.GITHUB_ACTIONS === "true";
 
 const nextConfig: NextConfig = {
